@@ -212,8 +212,8 @@ def book_seat(target: date, dry_run: bool = False) -> bool:
                 detail = body[:300]
 
             if "conflict" in detail.lower():
-                log.warning("Seat %s on %s is already booked: %s", SEAT_NAME, target, detail)
-                return False
+                log.info("Seat %s on %s is already booked — nothing to do.", SEAT_NAME, target)
+                return True  # not an error, just already taken
             else:
                 log.error("Booking failed (HTTP %s): %s", status, detail)
                 return False
