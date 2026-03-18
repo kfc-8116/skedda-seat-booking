@@ -30,8 +30,7 @@ jobs:
           SKEDDA_URL: ${{ secrets.SKEDDA_URL }}
           SKEDDA_EMAIL: ${{ secrets.SKEDDA_EMAIL }}
           SKEDDA_PASS: ${{ secrets.SKEDDA_PASS }}
-          SPACE_ID: ${{ secrets.SPACE_ID }}
-          SEAT_NAME: ${{ secrets.SEAT_NAME }}
+          SEAT_PRIORITY: ${{ secrets.SEAT_PRIORITY }}
           BOOKING_START: "09:00"
           BOOKING_END: "18:00"
           DAYS_AHEAD: "12"
