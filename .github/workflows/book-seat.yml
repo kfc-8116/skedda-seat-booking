@@ -2,11 +2,11 @@ name: Book Skedda Seat
 
 on:
   schedule:
-    # Run at 00:05 SGT (16:05 UTC previous day) on Wed/Sat/Sun only
-    # Wed 00:05 SGT → Tue 16:05 UTC → books Monday (12 days ahead)
-    # Sat 00:05 SGT → Fri 16:05 UTC → books Thursday (12 days ahead)
-    # Sun 00:05 SGT → Sat 16:05 UTC → books Friday (12 days ahead)
-    - cron: "5 16 * * 2,5,6"
+    # Run at 00:01 SGT (16:01 UTC previous day) on Wed/Sat/Sun only
+    # Wed 00:01 SGT → Tue 16:01 UTC → books Monday (12 days ahead)
+    # Sat 00:01 SGT → Fri 16:01 UTC → books Thursday (12 days ahead)
+    # Sun 00:01 SGT → Sat 16:01 UTC → books Friday (12 days ahead)
+    - cron: "1 16 * * 2,5,6"
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
 jobs:
