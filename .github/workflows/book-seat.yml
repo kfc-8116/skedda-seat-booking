@@ -2,9 +2,11 @@ name: Book Skedda Seat
 
 on:
   schedule:
-    # Run daily at 00:05 SGT (16:05 UTC previous day)
-    # Singapore is UTC+8, so 00:05 SGT = 16:05 UTC
-    - cron: "5 16 * * *"
+    # Run at 00:05 SGT (16:05 UTC previous day) on Wed/Sat/Sun only
+    # Wed 00:05 SGT → Tue 16:05 UTC → books Monday (12 days ahead)
+    # Sat 00:05 SGT → Fri 16:05 UTC → books Thursday (12 days ahead)
+    # Sun 00:05 SGT → Sat 16:05 UTC → books Friday (12 days ahead)
+    - cron: "5 16 * * 2,5,6"
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
 jobs:
