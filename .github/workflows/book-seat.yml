@@ -28,7 +28,7 @@ jobs:
           BOOKING_START: "09:00"
           BOOKING_END: "18:00"
           DAYS_AHEAD: "12"
-          BOOKING_DAYS: "0,3,4"
+          BOOKING_DAYS: "0,1,2"
           TIMEZONE: "Asia/Singapore"
         run: python book_seat.py
 
